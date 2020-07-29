@@ -13,6 +13,7 @@ public class Login : MonoBehaviour
     public InputField userPassword;
     public Button btnSubmit;
     public Button btnRegister;
+    public Button btnUserList;
     Action<string> _createUserCallback;
     void Start()
     {
@@ -25,6 +26,10 @@ public class Login : MonoBehaviour
         btnRegister.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("Register");
+        });
+        btnUserList.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("User");
         });
     }
     public IEnumerator login(string username, string password)
